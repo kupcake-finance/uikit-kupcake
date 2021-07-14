@@ -8,7 +8,7 @@ export const Bar = styled.div<BarProps>`
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #00c7c6;
+  background-color: #48cae4;
   border-top-left-radius: 32px;
   border-bottom-left-radius: 32px;
   height: 16px;

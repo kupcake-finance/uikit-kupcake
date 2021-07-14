@@ -15,10 +15,10 @@ interface Props extends InjectedProps {
 
 const StyledModal = styled.div`
   background: ${({ theme }) => theme.modal.background};
-  box-shadow: 0px 20px 36px -8px rgba(14, 14, 44, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.05);
-  border: 1px solid ${({ theme }) => theme.colors.borderColor};
+  box-shadow: 0 0 10px #3c3c3c;
+  border: 5px solid #fff !important;
   border-radius: 21px;
-  width: 100%;
+  /* width: 100%; */
   z-index: ${({ theme }) => theme.zIndices.modal};
   overflow-y: auto;
   ${({ theme }) => theme.mediaQueries.xs} {
@@ -40,7 +40,41 @@ const ModalTitle = styled(Flex)`
   align-items: center;
   flex: 1;
 `;
+const StyledButton = styled(IconButton)`
+  font-family: 'Roboto', sans-serif !important;
+  background-color: #48cae4;
+  margin-right: 5px;
+  height: 40px;
+  font-weight: 600;
+  /* width: 40px; */
+  box-shadow: none;
+  transition: all 0s ease-in-out;
+    border: 2px solid #fff !important;
 
+  & > svg,
+  & > svg > * {
+    fill: #fff;
+  }
+
+  &:hover {
+    color: #48cae4;
+    background-color: #fff;
+    border: 2px solid #48cae4 !important;
+
+    & > svg,
+    & > svg > * {
+      fill: #48cae4;
+    }
+  }
+
+  &:focus {
+    box-shadow: none !important;
+  }
+
+  &:active {
+    background-color: #fff;
+  }
+`
 const Modal: React.FC<Props> = ({
   title,
   onDismiss,
@@ -53,16 +87,16 @@ const Modal: React.FC<Props> = ({
     <ModalHeader>
       <ModalTitle>
         {onBack && (
-          <IconButton variant="text" onClick={onBack} area-label="go back" mr="8px">
+          <StyledButton variant="text" onClick={onBack} area-label="go back" mr="8px">
             <ArrowBackIcon color="primary" />
-          </IconButton>
+          </StyledButton>
         )}
         <Heading>{title}</Heading>
       </ModalTitle>
       {!hideCloseButton && (
-        <IconButton variant="text" onClick={onDismiss} aria-label="Close the dialog">
+        <StyledButton variant="text" onClick={onDismiss} aria-label="Close the dialog">
           <CloseIcon color="primary" />
-        </IconButton>
+        </StyledButton>
       )}
     </ModalHeader>
     <Flex flexDirection="column" p={bodyPadding}>

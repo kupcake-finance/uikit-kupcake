@@ -1,2 +1,2 @@
-# 🧁 Kupcake UIkit
+# 🧁 KupcakeSwap UIkit
 

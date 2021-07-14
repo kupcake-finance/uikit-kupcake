@@ -74,7 +74,7 @@ const StyledButton = styled.button<ButtonProps>`
   padding-top: 8px;
   padding-bottom: 8px;
   border-radius: 980px;
-  background: #00c7c6;
+  background: #48cae4;
   color: #fff;
 
   &:hover:not(:disabled):not(.button--disabled):not(:active) {
