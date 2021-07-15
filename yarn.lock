@@ -1563,7 +1563,7 @@
   dependencies:
     "@typescript-eslint/eslint-plugin" "^4.7.0"
     "@typescript-eslint/parser" "^4.7.0"
-    eslint-config-airKUP "^18.2.1"
+    eslint-config-airbnb "^18.2.1"
     eslint-config-prettier "^6.15.0"
     eslint-plugin-import "^2.22.1"
     eslint-plugin-jsx-a11y "^6.4.1"
@@ -2008,7 +2008,7 @@
     "@types/glob-base" "^0.3.0"
     "@types/micromatch" "^4.0.1"
     "@types/node-fetch" "^2.5.4"
-    airKUP-js-shims "^2.2.1"
+    airbnb-js-shims "^2.2.1"
     ansi-to-html "^0.6.11"
     autoprefixer "^9.7.2"
     babel-loader "^8.0.6"
@@ -3128,9 +3128,9 @@ aggregate-error@^3.0.0:
     clean-stack "^2.0.0"
     indent-string "^4.0.0"
 
-airKUP-js-shims@^2.2.1:
+airbnb-js-shims@^2.2.1:
   version "2.2.1"
-  resolved "https://registry.yarnpkg.com/airKUP-js-shims/-/airKUP-js-shims-2.2.1.tgz#db481102d682b98ed1daa4c5baa697a05ce5c040"
+  resolved "https://registry.yarnpkg.com/airbnb-js-shims/-/airbnb-js-shims-2.2.1.tgz#db481102d682b98ed1daa4c5baa697a05ce5c040"
   integrity sha512-wJNXPH66U2xjgo1Zwyjf9EydvJ2Si94+vSdk6EERcBfB2VZkeltpqIats0cqIZMLCXP3zcyaUKGYQeIBT6XjsQ==
   dependencies:
     array-includes "^3.0.3"
@@ -5875,21 +5875,21 @@ escodegen@^1.12.0, escodegen@^1.14.1:
   optionalDependencies:
     source-map "~0.6.1"
 
-eslint-config-airKUP-base@^14.2.1:
+eslint-config-airbnb-base@^14.2.1:
   version "14.2.1"
-  resolved "https://registry.yarnpkg.com/eslint-config-airKUP-base/-/eslint-config-airKUP-base-14.2.1.tgz#8a2eb38455dc5a312550193b319cdaeef042cd1e"
+  resolved "https://registry.yarnpkg.com/eslint-config-airbnb-base/-/eslint-config-airbnb-base-14.2.1.tgz#8a2eb38455dc5a312550193b319cdaeef042cd1e"
   integrity sha512-GOrQyDtVEc1Xy20U7vsB2yAoB4nBlfH5HZJeatRXHleO+OS5Ot+MWij4Dpltw4/DyIkqUfqz1epfhVR5XWWQPA==
   dependencies:
     confusing-browser-globals "^1.0.10"
     object.assign "^4.1.2"
     object.entries "^1.1.2"
 
-eslint-config-airKUP@^18.2.1:
+eslint-config-airbnb@^18.2.1:
   version "18.2.1"
-  resolved "https://registry.yarnpkg.com/eslint-config-airKUP/-/eslint-config-airKUP-18.2.1.tgz#b7fe2b42f9f8173e825b73c8014b592e449c98d9"
+  resolved "https://registry.yarnpkg.com/eslint-config-airbnb/-/eslint-config-airbnb-18.2.1.tgz#b7fe2b42f9f8173e825b73c8014b592e449c98d9"
   integrity sha512-glZNDEZ36VdlZWoxn/bUR1r/sdFKPd1mHPbqUtkctgNG4yT2DLLtJ3D+yCV+jzZCc2V1nBVkmdknOJBZ5Hc0fg==
   dependencies:
-    eslint-config-airKUP-base "^14.2.1"
+    eslint-config-airbnb-base "^14.2.1"
     object.assign "^4.1.2"
     object.entries "^1.1.2"
 
