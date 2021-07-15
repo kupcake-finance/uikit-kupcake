@@ -29,6 +29,7 @@ const StyledModal = styled.div`
 `;
 
 const ModalHeader = styled.div`
+  position: relative;
   display: flex;
   align-items: center;
   border-bottom: 1px solid #e9eaeb;
@@ -41,19 +42,24 @@ const ModalTitle = styled(Flex)`
   flex: 1;
 `;
 const StyledButton = styled(IconButton)`
-  font-family: 'Roboto', sans-serif !important;
+  font-family: "Roboto", sans-serif !important;
   background-color: #48cae4;
   margin-right: 5px;
-  height: 40px;
+  height: 50px;
   font-weight: 600;
-  /* width: 40px; */
   box-shadow: none;
+  -webkit-transition: all 0s ease-in-out;
   transition: all 0s ease-in-out;
-    border: 2px solid #fff !important;
+  border: 2px solid #fff !important;
+  position: absolute;
+  right: -8px;
+  top: -4px;
+  border-radius: 0 0 0 15px;
 
   & > svg,
   & > svg > * {
     fill: #fff;
+    width: 26px;
   }
 
   &:hover {
@@ -74,7 +80,18 @@ const StyledButton = styled(IconButton)`
   &:active {
     background-color: #fff;
   }
-`
+`;
+
+const StyledHeading = styled(Heading)`
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 15px;
+  font-family: "M PLUS Rounded 1c", sans-serif !important;
+  margin-top: 10px;
+  color: #49cae4;
+  letter-spacing: -1px;
+`;
 const Modal: React.FC<Props> = ({
   title,
   onDismiss,
