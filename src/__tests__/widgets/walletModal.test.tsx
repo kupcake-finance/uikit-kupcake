@@ -481,7 +481,7 @@ it("renders AccountModal correctly", () => {
               rel="noreferrer noopener"
               target="_blank"
             >
-              View on BscScan
+              view on KCC Explorer
               <svg
                 class="sc-dlfnbm dJUqYR"
                 color="primary"

@@ -1739,7 +1739,7 @@ var useParticleBurst = function (options) {
     return { initialize: initialize, teardown: teardown };
 };
 
-var StyledModal = styled__default['default'].div(templateObject_1$u || (templateObject_1$u = __makeTemplateObject(["\n  background: ", ";\n  box-shadow: 0 0 10px #3c3c3c;\n  border: 5px solid #fff !important;\n  border-radius: 21px;\n  width: 100%;\n  z-index: ", ";\n  overflow-y: auto;\n  ", " {\n    width: auto;\n    min-width: 360px;\n    max-width: 100%;\n  }\n"], ["\n  background: ", ";\n  box-shadow: 0 0 10px #3c3c3c;\n  border: 5px solid #fff !important;\n  border-radius: 21px;\n  width: 100%;\n  z-index: ", ";\n  overflow-y: auto;\n  ", " {\n    width: auto;\n    min-width: 360px;\n    max-width: 100%;\n  }\n"])), function (_a) {
+var StyledModal = styled__default['default'].div(templateObject_1$u || (templateObject_1$u = __makeTemplateObject(["\n  overflow: hidden;\n  background: ", ";\n  box-shadow: 0 0 10px #3c3c3c;\n  border: 5px solid #fff !important;\n  border-radius: 21px;\n  /* width: 100%; */\n  z-index: ", ";\n  overflow-y: auto;\n  ", " {\n    width: auto;\n    min-width: 360px;\n    max-width: 100%;\n  }\n"], ["\n  overflow: hidden;\n  background: ", ";\n  box-shadow: 0 0 10px #3c3c3c;\n  border: 5px solid #fff !important;\n  border-radius: 21px;\n  /* width: 100%; */\n  z-index: ", ";\n  overflow-y: auto;\n  ", " {\n    width: auto;\n    min-width: 360px;\n    max-width: 100%;\n  }\n"])), function (_a) {
     var theme = _a.theme;
     return theme.modal.background;
 }, function (_a) {
@@ -1749,9 +1749,10 @@ var StyledModal = styled__default['default'].div(templateObject_1$u || (template
     var theme = _a.theme;
     return theme.mediaQueries.xs;
 });
-var ModalHeader = styled__default['default'].div(templateObject_2$9 || (templateObject_2$9 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  border-bottom: 1px solid #e9eaeb;\n  align-items: center;\n  padding: 12px 24px;\n"], ["\n  display: flex;\n  align-items: center;\n  border-bottom: 1px solid #e9eaeb;\n  align-items: center;\n  padding: 12px 24px;\n"])));
+var ModalHeader = styled__default['default'].div(templateObject_2$9 || (templateObject_2$9 = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n  align-items: center;\n  border-bottom: 1px solid #e9eaeb;\n  align-items: center;\n  padding: 12px 24px;\n"], ["\n  position: relative;\n  display: flex;\n  align-items: center;\n  border-bottom: 1px solid #e9eaeb;\n  align-items: center;\n  padding: 12px 24px;\n"])));
 var ModalTitle = styled__default['default'](Flex)(templateObject_3$5 || (templateObject_3$5 = __makeTemplateObject(["\n  align-items: center;\n  flex: 1;\n"], ["\n  align-items: center;\n  flex: 1;\n"])));
-var StyledButton$1 = styled__default['default'](IconButton)(templateObject_4$2 || (templateObject_4$2 = __makeTemplateObject(["\n  font-family: 'Roboto', sans-serif !important;\n  background-color: #48cae4;\n  margin-right: 5px;\n  height: 40px;\n  font-weight: 600;\n  /* width: 40px; */\n  box-shadow: none;\n  transition: all 0s ease-in-out;\n    border: 2px solid #fff !important;\n\n  & > svg,\n  & > svg > * {\n    fill: #fff;\n  }\n\n  &:hover {\n    color: #48cae4;\n    background-color: #fff;\n    border: 2px solid #48cae4 !important;\n\n    & > svg,\n    & > svg > * {\n      fill: #48cae4;\n    }\n  }\n\n  &:focus {\n    box-shadow: none !important;\n  }\n\n  &:active {\n    background-color: #fff;\n  }\n"], ["\n  font-family: 'Roboto', sans-serif !important;\n  background-color: #48cae4;\n  margin-right: 5px;\n  height: 40px;\n  font-weight: 600;\n  /* width: 40px; */\n  box-shadow: none;\n  transition: all 0s ease-in-out;\n    border: 2px solid #fff !important;\n\n  & > svg,\n  & > svg > * {\n    fill: #fff;\n  }\n\n  &:hover {\n    color: #48cae4;\n    background-color: #fff;\n    border: 2px solid #48cae4 !important;\n\n    & > svg,\n    & > svg > * {\n      fill: #48cae4;\n    }\n  }\n\n  &:focus {\n    box-shadow: none !important;\n  }\n\n  &:active {\n    background-color: #fff;\n  }\n"])));
+var StyledButton$1 = styled__default['default'](IconButton)(templateObject_4$2 || (templateObject_4$2 = __makeTemplateObject(["\n  font-family: \"Roboto\", sans-serif !important;\n  background-color: #48cae4;\n  margin-right: 5px;\n  height: 50px;\n  font-weight: 600;\n  box-shadow: none;\n  -webkit-transition: all 0.2s ease-in-out;\n  transition: all 0.2s ease-in-out;\n  border: 2px solid #fff !important;\n  position: absolute;\n  right: -8px;\n  top: -4px;\n  border-radius: 0 0 0 15px;\n\n  & > svg,\n  & > svg > * {\n    fill: #fff;\n    width: 26px;\n  }\n\n  &:hover {\n    color: #48cae4;\n    background-color: #fff;\n    border: 2px solid #48cae4 !important;\n\n    & > svg,\n    & > svg > * {\n      fill: #48cae4;\n    }\n  }\n\n  &:focus {\n    box-shadow: none !important;\n  }\n\n  &:active {\n    background-color: #fff;\n  }\n"], ["\n  font-family: \"Roboto\", sans-serif !important;\n  background-color: #48cae4;\n  margin-right: 5px;\n  height: 50px;\n  font-weight: 600;\n  box-shadow: none;\n  -webkit-transition: all 0.2s ease-in-out;\n  transition: all 0.2s ease-in-out;\n  border: 2px solid #fff !important;\n  position: absolute;\n  right: -8px;\n  top: -4px;\n  border-radius: 0 0 0 15px;\n\n  & > svg,\n  & > svg > * {\n    fill: #fff;\n    width: 26px;\n  }\n\n  &:hover {\n    color: #48cae4;\n    background-color: #fff;\n    border: 2px solid #48cae4 !important;\n\n    & > svg,\n    & > svg > * {\n      fill: #48cae4;\n    }\n  }\n\n  &:focus {\n    box-shadow: none !important;\n  }\n\n  &:active {\n    background-color: #fff;\n  }\n"])));
+styled__default['default'](Heading)(templateObject_5$1 || (templateObject_5$1 = __makeTemplateObject(["\n  font-size: 28px;\n  font-weight: 800;\n  line-height: 1.1;\n  margin-bottom: 15px;\n  font-family: \"M PLUS Rounded 1c\", sans-serif !important;\n  margin-top: 10px;\n  color: #49cae4;\n  letter-spacing: -1px;\n"], ["\n  font-size: 28px;\n  font-weight: 800;\n  line-height: 1.1;\n  margin-bottom: 15px;\n  font-family: \"M PLUS Rounded 1c\", sans-serif !important;\n  margin-top: 10px;\n  color: #49cae4;\n  letter-spacing: -1px;\n"])));
 var Modal = function (_a) {
     var title = _a.title, onDismiss = _a.onDismiss, onBack = _a.onBack, children = _a.children, _b = _a.hideCloseButton, hideCloseButton = _b === void 0 ? false : _b, _c = _a.bodyPadding, bodyPadding = _c === void 0 ? "24px" : _c;
     return (React__default['default'].createElement(StyledModal, null,
@@ -1764,7 +1765,7 @@ var Modal = function (_a) {
                 React__default['default'].createElement(Icon$k, { color: "primary" })))),
         React__default['default'].createElement(Flex, { flexDirection: "column", p: bodyPadding }, children)));
 };
-var templateObject_1$u, templateObject_2$9, templateObject_3$5, templateObject_4$2;
+var templateObject_1$u, templateObject_2$9, templateObject_3$5, templateObject_4$2, templateObject_5$1;
 
 var Overlay = styled__default['default'].div.attrs({ role: "presentation" })(templateObject_1$v || (templateObject_1$v = __makeTemplateObject(["\n  position: fixed;\n  top: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n  background-color: ", ";\n  transition: opacity 0.4s;\n  opacity: ", ";\n  z-index: ", ";\n  pointer-events: ", ";\n"], ["\n  position: fixed;\n  top: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n  background-color: ", ";\n  transition: opacity 0.4s;\n  opacity: ", ";\n  z-index: ", ";\n  pointer-events: ", ";\n"])), function (props) { return props.theme.card.background; }, function (_a) {
     var show = _a.show;
@@ -2582,7 +2583,7 @@ var AccountModal = function (_a) {
     return (React__default['default'].createElement(Modal, { title: "Your wallet", onDismiss: onDismiss },
         React__default['default'].createElement(Text, { fontSize: "20px", bold: true, style: { whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", marginBottom: "8px" } }, account),
         React__default['default'].createElement(Flex, { mb: "32px" },
-            React__default['default'].createElement(LinkExternal, { small: true, href: "https://bscscan.com/address/" + account, mr: "16px" }, "View on BscScan"),
+            React__default['default'].createElement(LinkExternal, { small: true, href: "https://explorer.kcc.io/address/" + account, mr: "16px" }, "View on KCC Explorer"),
             React__default['default'].createElement(CopyToClipboard, { toCopy: account }, "Copy Address")),
         React__default['default'].createElement(Flex, { justifyContent: "center" },
             React__default['default'].createElement(Button, { size: "sm", variant: "secondary", onClick: function () {
@@ -2667,7 +2668,7 @@ styled__default['default'](Panel)(templateObject_4$4 || (templateObject_4$4 = __
     var theme = _a.theme;
     return theme.mediaQueries.lg;
 });
-var NewLogo = styled__default['default'](Logo$1)(templateObject_5$1 || (templateObject_5$1 = __makeTemplateObject(["\n  ", " {\n    display: flex;\n  }\n  ", " {\n    display: flex;\n  }\n\n  ", " {\n    display: none;\n  }\n"], ["\n  ", " {\n    display: flex;\n  }\n  ", " {\n    display: flex;\n  }\n\n  ", " {\n    display: none;\n  }\n"])), function (_a) {
+var NewLogo = styled__default['default'](Logo$1)(templateObject_5$2 || (templateObject_5$2 = __makeTemplateObject(["\n  ", " {\n    display: flex;\n  }\n  ", " {\n    display: flex;\n  }\n\n  ", " {\n    display: none;\n  }\n"], ["\n  ", " {\n    display: flex;\n  }\n  ", " {\n    display: flex;\n  }\n\n  ", " {\n    display: none;\n  }\n"])), function (_a) {
     var theme = _a.theme;
     return theme.mediaQueries.xs;
 }, function (_a) {
@@ -2772,7 +2773,7 @@ var Menu = function (_a) {
             React__default['default'].createElement(Inner, { isPushed: isPushed, showMenu: showMenu }, children),
             React__default['default'].createElement(MobileOnlyOverlay, { show: isPushed, onClick: function () { return setIsPushed(false); }, role: "presentation" }))));
 };
-var templateObject_1$J, templateObject_2$h, templateObject_3$8, templateObject_4$4, templateObject_5$1, templateObject_6, templateObject_7, templateObject_8, templateObject_9, templateObject_10, templateObject_11, templateObject_12, templateObject_13, templateObject_14;
+var templateObject_1$J, templateObject_2$h, templateObject_3$8, templateObject_4$4, templateObject_5$2, templateObject_6, templateObject_7, templateObject_8, templateObject_9, templateObject_10, templateObject_11, templateObject_12, templateObject_13, templateObject_14;
 
 var ToastAction = function (_a) {
     var action = _a.action;

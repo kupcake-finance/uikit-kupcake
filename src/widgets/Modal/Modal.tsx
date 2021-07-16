@@ -14,6 +14,7 @@ interface Props extends InjectedProps {
 }
 
 const StyledModal = styled.div`
+  overflow: hidden;
   background: ${({ theme }) => theme.modal.background};
   box-shadow: 0 0 10px #3c3c3c;
   border: 5px solid #fff !important;
@@ -48,8 +49,8 @@ const StyledButton = styled(IconButton)`
   height: 50px;
   font-weight: 600;
   box-shadow: none;
-  -webkit-transition: all 0s ease-in-out;
-  transition: all 0s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   border: 2px solid #fff !important;
   position: absolute;
   right: -8px;
