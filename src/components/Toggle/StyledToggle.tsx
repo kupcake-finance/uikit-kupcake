@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Handle = styled.div`
-  background-color: #ff629a;
+  background-color: #fff;
   border-radius: 50%;
   cursor: pointer;
   height: 32px;
@@ -11,6 +11,7 @@ export const Handle = styled.div`
   transition: left 200ms ease-in;
   width: 32px;
   z-index: 1;
+  box-shadow: 0px 0px 0px 4px #48cae4; 
 `;
 
 export const Input = styled.input`
@@ -26,17 +27,17 @@ export const Input = styled.input`
   }
 
   &:focus + ${Handle} {
-    box-shadow: ${({ theme }) => theme.shadows.focus};
+    box-shadow: 0px 0px 0px 4px #ff629a; 
   }
 
   &:hover + ${Handle}:not(:disabled):not(:checked) {
-    box-shadow: ${({ theme }) => theme.shadows.focus};
+    box-shadow: 0px 0px 0px 4px #ff629a; 
   }
 `;
 
 const StyledToggle = styled.div<{ checked: boolean }>`
   align-items: center;
-  background-color: #ff629a;
+  background-color: #fff;
   border-radius: 24px;
   box-shadow: ${({ theme }) => theme.shadows.inset};
   cursor: pointer;

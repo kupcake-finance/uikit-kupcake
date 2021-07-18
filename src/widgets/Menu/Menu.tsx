@@ -14,6 +14,42 @@ import { NavProps } from "./types";
 import { MENU_HEIGHT, SIDEBAR_WIDTH_REDUCED, SIDEBAR_WIDTH_FULL } from "./config";
 import Avatar from "./Avatar";
 
+const StyledButton = styled(Button)`
+  font-family: "Roboto", sans-serif !important;
+  background-color: #48cae4;
+  margin-right: 5px;
+  height: 30px;
+  font-weight: 500;
+  max-width: 300px;
+  box-shadow: none;
+  transition: all 0.2s ease-in-out;
+  border: 2px solid #fff !important;
+
+  & > svg,
+  & > svg > * {
+    fill: #fff;
+  }
+
+  &:hover {
+    color: #48cae4;
+    background-color: #fff;
+    border: 2px solid #48cae4 !important;
+
+    & > svg,
+    & > svg > * {
+      fill: #48cae4;
+    }
+  }
+
+  &:focus {
+    box-shadow: none !important;
+  }
+
+  &:active {
+    background-color: #fff;
+  }
+`;
+
 const Wrapper = styled.div`
   position: relative;
   width: 100%;
@@ -155,6 +191,19 @@ const Menu: React.FC<NavProps> = ({
       display: flex;
     }
   `;
+
+  const StyledKupIcon = styled(PancakeRoundIcon)`
+    ${({ theme }) => theme.mediaQueries.xs} {
+      display: none;
+    }
+    ${({ theme }) => theme.mediaQueries.sm} {
+      display: none;
+    }
+
+    ${({ theme }) => theme.mediaQueries.lg} {
+      display: flex;
+    }
+  `;
   const NewNavLi = styled.li`
     color: #f5f5f7;
     opacity: 0.8;
@@ -197,87 +246,29 @@ const Menu: React.FC<NavProps> = ({
   `;
 
   return (
-    <Wrapper>
-      <StyledNav showMenu={showMenu}>
-        <NewLogo
-          isPushed={isPushed}
-          togglePush={() => setIsPushed((prevState: boolean) => !prevState)}
-          isDark={isDark}
-          href={homeLink?.href ?? "/"}
-        />
-        <HeaderFlex flexDirection="row" justifyContent="space-between" alignItems="center">
-          <>
-            {cakePriceUsd ? (
-              <>
-                <SpacedButton size="sm" variant="transparent">
-                  <PancakeRoundIcon width="20px" mr="8px" />
-                  {`$ ${cakePriceUsd.toFixed(3)}`}
-                </SpacedButton>
-              </>
-            ) : (
-              <SpacedButton size="sm">
-                <Skeleton width={80} height={24} />
-              </SpacedButton>
-            )}
-          </>
+    <>
+      <HeaderFlex flexDirection="row" justifyContent="space-between" alignItems="center">
+        <>
+          {cakePriceUsd ? (
+            <>
+              <StyledButton size="sm" variant="transparent">
+                <StyledKupIcon width="20px" mr="8px" />
+                {`$ ${cakePriceUsd.toFixed(3)}`}
+              </StyledButton>
+            </>
+          ) : (
+            <StyledButton size="sm">
+              <Skeleton width={80} height={24} />
+            </StyledButton>
+          )}
+        </>
 
-          <>
-            <NewNavUl>
-              <NewNavLi>
-                <NewNavA href="/">
-                  <img src="/images/common/token-white.png" alt="Token" width="17px" />
-                </NewNavA>
-              </NewNavLi>
-              <NewNavLi>
-                <NewNavA href="/">Home</NewNavA>
-              </NewNavLi>
-              <NewNavLi>
-                <NewNavA href="/swap">Swap</NewNavA>
-              </NewNavLi>
-              <NewNavLi>
-                <NewNavA href="/liquidity">Liquidity</NewNavA>
-              </NewNavLi>
-              <NewNavLi>
-                <NewNavA href="/farms">Farm</NewNavA>
-              </NewNavLi>
-              {/* <NewNavLi>
-                <NewNavA href="/lottery">Lottery</NewNavA>
-              </NewNavLi> */}
-              <NewNavLi>
-                <NewNavA href="/chart">Chart</NewNavA>
-              </NewNavLi>
-              <NewNavLi>
-                <NewNavA href="/">Doc</NewNavA>
-              </NewNavLi>
-            </NewNavUl>
-          </>
-          <>
-            <UserBlock account={account} login={login} logout={logout} cakePriceUsd={cakePriceUsd} />
-            {profile && <Avatar profile={profile} />}
-          </>
-        </HeaderFlex>
-      </StyledNav>
-      <BodyWrapper>
-        <Panel
-          isPushed={isPushed}
-          isMobile={isMobile}
-          showMenu={showMenu}
-          isDark={isDark}
-          toggleTheme={toggleTheme}
-          langs={langs}
-          setLang={setLang}
-          currentLang={currentLang}
-          cakePriceUsd={cakePriceUsd}
-          pushNav={setIsPushed}
-          links={links}
-          priceLink={priceLink}
-        />
-        <Inner isPushed={isPushed} showMenu={showMenu}>
-          {children}
-        </Inner>
-        <MobileOnlyOverlay show={isPushed} onClick={() => setIsPushed(false)} role="presentation" />
-      </BodyWrapper>
-    </Wrapper>
+        <>
+          <UserBlock account={account} login={login} logout={logout} cakePriceUsd={cakePriceUsd} />
+          {profile && <Avatar profile={profile} />}
+        </>
+      </HeaderFlex>
+    </>
   );
 };
 

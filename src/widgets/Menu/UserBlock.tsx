@@ -25,6 +25,78 @@ const SpacedButton = styled(Button)`
   }
 `;
 
+const StyledButton = styled(Button)`
+  font-family: 'Roboto', sans-serif !important;
+  background-color: #48cae4;
+  margin-right: 5px;
+  height: 30px;
+  font-weight: 500;
+  max-width: 300px;
+  box-shadow: none;
+  transition: all 0.2s ease-in-out;
+  border: 2px solid #fff !important;
+
+  & > svg,
+  & > svg > * {
+    fill: #fff;
+  }
+
+  &:hover {
+    color: #48cae4;
+    background-color: #fff;
+    border: 2px solid #48cae4 !important;
+
+    & > svg,
+    & > svg > * {
+      fill: #48cae4;
+    }
+  }
+
+  &:focus {
+    box-shadow: none !important;
+  }
+
+  &:active {
+    background-color: #fff;
+  }
+`
+
+const StyledRedButton = styled(Button)`
+  font-family: 'Roboto', sans-serif !important;
+  background-color: #ff629a;
+  margin-right: 5px;
+  height: 30px;
+  font-weight: 400;
+  max-width: 300px;
+  box-shadow: none;
+  transition: all 0.2s ease-in-out;
+  border: 2px solid #fff !important;
+
+  & > svg,
+  & > svg > * {
+    fill: #fff;
+  }
+
+  &:hover {
+    color: #ff629a;
+    background-color: #fff;
+    border: 2px solid #ff629a !important;
+
+    & > svg,
+    & > svg > * {
+      fill: #ff629a;
+    }
+  }
+
+  &:focus {
+    box-shadow: none !important;
+  }
+
+  &:active {
+    background-color: #fff;
+  }
+`
+
 const UserBlock: React.FC<Props> = ({ account, login, logout, cakePriceUsd }) => {
   const { onPresentConnectModal, onPresentAccountModal } = useWalletModal(login, logout, account);
   const accountEllipsis = account ? `${account.substring(0, 4)}...${account.substring(account.length - 4)}` : null;
@@ -47,7 +119,7 @@ const UserBlock: React.FC<Props> = ({ account, login, logout, cakePriceUsd }) =>
       )} */}
 
       {account ? (
-        <SpacedButton
+        <StyledRedButton
           size="sm"
           variant="primary"
           onClick={() => {
@@ -55,16 +127,16 @@ const UserBlock: React.FC<Props> = ({ account, login, logout, cakePriceUsd }) =>
           }}
         >
           {accountEllipsis}
-        </SpacedButton>
+        </StyledRedButton>
       ) : (
-        <SpacedButton
+        <StyledButton
           size="sm"
           onClick={() => {
             onPresentConnectModal();
           }}
         >
           Connect
-        </SpacedButton>
+        </StyledButton>
       )}
     </Flex>
   );
